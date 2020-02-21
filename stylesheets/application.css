@@ -1,0 +1,427 @@
+@import url(../../../stylesheets/application.css);
+@import url(font-awesome.css);
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(theme.css);
+@import url(lists.css);
+@import url(color_tasks.css);
+@import url(DMSF.css);
+@import url(buttons.css);
+@import url(forum.css);
+@import url(news.css);
+@import url(pagination.css);
+@import url(redminebacklogs.css);
+@import url(activity.css);
+@import url(projects.css);
+@import url(menu_icons.css);
+
+html{
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Lato', Helvetika, Calibri, Arial, sans-serif;
+  font-size: 100%;
+  padding: 0 !important;
+  margin: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+h1, h2, h3, h4 {
+  font-family: 'Lato', Helvetika, Calibri, Arial, sans-serif;
+  padding: 2px 10px 1px 0px;
+  margin: 0 0 10px 0;
+}
+
+h1:first-letter{
+  text-transform: capitalize;
+}
+input:focus {
+  outline-width: 0;
+}
+#wrapper3 {
+  margin-top: 36px;
+  margin-left: 50px;
+}
+#top-menu{
+  width: 50px;
+  height: 100%;
+  line-height: 30px;
+  padding: unset;
+  position: fixed;
+  top: 36px;
+  left: 0;
+  transition: none;
+  background-color: #354051;
+  box-shadow: 0 0 1px#000;
+}
+#top-menu a {
+  color: #a0abbe;
+  margin-right: 0px;
+  font-size: 16px;
+}
+#top-menu li.active {
+  background: #495c79;
+  color: #ffffff;
+  border-right: 3px solid #40aff8;
+}
+#top-menu a:hover {
+  color: #47a3da;
+  text-decoration: none;
+}
+
+#top-menu ul li {
+  float: none;
+  text-align: center;
+  white-space: unset;
+}
+
+#top-menu, .menu-push-toright, body, #menu, #quick-search {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#menu{
+  left: 0;
+  top: 0px;
+  padding-top: 3px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  position: fixed;
+  border: 2px solid #eeeff3;
+  border-top: none;
+  z-index: 101;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media print {
+  #menu {
+    display: none;
+  }
+}
+
+#top-menu.open{
+  left: 0;
+}
+
+.menu-push-toright{
+  left: 240px;
+}
+#menu.menu-push-toright{
+  left: 240px;
+}
+
+#quick-search.menu-push-toright{
+  left: 300px;
+}
+#quick-search {
+  padding-right: 5px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+label[for="q"]{
+  display: none;
+}
+
+#header{
+  background-color: #354051;
+  color: #fefefe;
+  min-height: 0;
+  height: 36px;
+  padding: 0 0 0 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+
+#header h1{
+  color: #a0abbe;
+  padding: 0 0 0 0;
+  font-size: 30px;
+  margin: 0 0 0 0;
+}
+#header h1 a{
+  color: #4e515e;
+}
+#header a{
+  color: #fefefe;
+}
+
+#project-jump .drdn-trigger {
+  width: 29px;
+  height: 29px;
+  background-image: url('../../../images/projects.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0px;
+  background-color: #354051;
+  border: none;
+}
+
+#project-jump.drdn {
+  width: 29px;
+  height: 29px;
+  padding-left: 10px;
+}
+
+#project-jump .drdn-content {
+  border-radius: 0;
+  width: fit-content;
+}
+#project-jump .drdn-content .quick-search {
+  margin: 0;
+}
+
+#top-menu #loggedas{
+  font-size: 0;
+  float: none;
+  color: #999;
+  line-height: 28px;
+}
+
+#account {
+  width: 190px;
+  float: none;
+  line-height: 35px;
+  padding: 20px 0px 10px 20px;
+  margin: 0 15px 0 15px;
+}
+#account .tt_start, #account .tt_stop {
+  padding: 0px;
+}
+/*=========MAIN MENU=======*/
+#main-menu {
+  margin-right:0;
+  background-color: white;
+  top: 36px;
+  position: inherit;
+  bottom: unset;
+  left: 0;
+  border-bottom: 2px solid;
+  border-bottom-color: #dee4e9;
+}
+#main-menu li a.selected,
+#main-menu li a.selected:hover {
+  border-bottom: 3px solid #40aff8;
+}
+#main-menu li a:hover {
+  border-bottom: 3px solid #40aff8;
+}
+#main-menu li a {
+  color: #555;
+  margin-left: 20px;
+  padding: 4px 5px 4px 5px;
+  border-bottom: 3px solid #fff;
+}
+#main-menu li a:hover {
+  background: none;
+  color: #000;
+  border-bottom: 3px solid #40aff8;
+}
+#main-menu li a.new-object {
+  background-color: transparent;
+}
+#main-menu .menu-children {
+  padding-top: 5px;
+  left: 55px;
+  top: 32px;
+  border-top: 1px solid
+  #759FCF;
+}
+#main-menu .menu-children li a {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 0;
+}
+#main-menu .menu-children li a:hover {
+  border-bottom: 3px solid #fff
+}
+div.tabs-buttons {
+  width: unset;
+  height: unset;
+  position: relative;
+}
+#content{
+  width: 81%;
+  background-color: #ebf1f5;
+  padding-left: 20px;
+}
+
+/*==========FALSH NOTICE======*/
+div.flash.notice{
+  border: none;
+  border-left: 20px solid #1ABB9B;
+  background: none;
+  background-color: rgba(0,255,0,0.1);
+  padding-left: 10px;
+  border-radius: 4px;
+}
+div.flash.error, #errorExplanation{
+  border: none;
+  border-left: 20px solid #880000;
+  background: none;
+  background-color: rgba(255,0,0,0.1);
+  padding-left: 10px;
+  border-radius: 4px;
+}
+div.flash.error, #errorExplanation ul{
+  margin: 2px;
+}
+p.nodata{
+  border: none;
+  border-left: 20px solid #FDBF3B;
+  background: none;
+  background-color: #FFEBC1;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+/*==========CALENDAR==========*/
+#ui-datepicker-div{
+  padding: 0;
+}
+.ui-datepicker-header{
+  background: #6f7c93;
+  border: none;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+  border-radius: 0px !important;
+}
+.ui-datepicker table{
+  display: block;
+}
+.ui-datepicker table .ui-datepicker-week-col{
+  padding-left: 20px;
+}
+#s2id_project_quick_jump_box, #project_quick_jump_box,
+.select2-drop.select2-with-searchbox.select2-drop-active{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/*==========SIDEBAR==========*/
+#sidebar {
+  width: 15% !important;
+  border-top: 1px solid #ddd;
+}
+#sidebar a.selected {
+  font-weight: bold;
+  color: inherit;
+  background-color: transparent;
+}
+#sidebar ul, ul.flat {
+  line-height: 24px;
+}
+#sidebarHandler,
+#hideSidebarButton {
+  position: absolute !important;
+  margin-top: -12px !important;
+  top: 50% !important;
+}
+
+.icon-file.application-pdf {
+  background-repeat: no-repeat;
+  padding-left: 26px;
+}
+
+.icon.icon-folder:before {
+  content: "\f07b";
+  display: inline-block;
+  width: 23px;
+}
+/*============ ISSUE ===========*/
+div.issue { background: #f6f6f6; }
+/*============ SELECT ==========*/
+select {
+    outline:none;
+    display: inline-block;
+    cursor:pointer;
+}
+
+/*=========== LOGO ============*/
+.redmine-logo {
+  width: 50px;
+  height: 36px;
+  text-align: center;
+  float: left;
+}
+.redmine-logo svg{
+  width: 26px;
+  height: 26px;
+  background-image: url('../images/redmine_logo.png');
+  background-repeat: no-repeat;
+  background-size: 26px;
+  margin: 5px 12px 5px 12px;
+}
+/*=========== RedmineCRM ======*/
+/* TODO: Find a way rewrite it */
+select[onchange="if (this.value != '') { window.location = this.value; }"]{
+  position: fixed;
+  top: 17px;
+  right: 10px;
+}
+
+.expandSearch input{
+  background: transparent;
+  font:14px/1.4 sans-serif;
+  padding-left: 26px;
+  background:#fff;
+  border-radius: 4px;
+  transition: 0.24s;
+  width: 0px;
+  padding: 20px 0px 8px 34px;
+  border:none;
+}
+.expandSearch input:focus{
+  border: 1px solid #ccc !important;
+  outline: none;
+  width:200px;
+  height: 28px;
+  padding: 15px 16px 15px 34px;
+  border-color: #0bf;
+  background-color: #fff !important;
+}
+#q1 {
+  padding-right: 12px;
+  padding-left: 5px;
+  background-color: #354051;
+  background-image: url('../../../images/magnifier.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #000;
+}
+
+/*=========For Popup window=========*/
+.ui-widget {
+  font-family: 'Lato', Helvetika, Calibri, Arial, sans-serif;
+  font-size: 100%;
+}
+.ui-button-text-only .ui-button-text {
+  padding: 0.1em 1em;
+}
+.ui-widget-header{
+  background: #6f7c93;
+}
+
+/* For Sub Project*/
+#header h1 .breadcrumbs {
+  display: unset;
+  top: -5px;
+  position: relative;
+}
+#header h1 .breadcrumbs a{ color: #a0abbe;}
+
+/* For side menu list view  */
+.drdn-content .icon {
+  display: block;
+}
+.drdn-items {
+  text-align: left;
+}
+table.plugins span.description, table.plugins span.name, table.plugins span.url{
+  text-align: left;
+}

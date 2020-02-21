@@ -1,0 +1,4 @@
+table.list td, table.list th {
+  height: 40px;
+  vertical-align: middle;
+}
