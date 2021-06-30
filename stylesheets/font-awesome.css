@@ -12,7 +12,8 @@
   font-style: normal;
 }
 .icon:before{ font-family: FontAwesome; }
-.fa, .icon.icon-add, .icon-checked, .icon-comment, .icon-copy, .icon.icon-del, .icon-save, .icon-copy, .icon-notification-off, .icon-notification-on, .icon-link, .icon-edit, .icon-reload, .icon-checked, .icon-fav-off, .icon-fav, .icon-unvote, .icon-time-add {
+.fa, .icon.icon-add, .icon-checked, .icon-comment, .icon-copy, .icon.icon-del, .icon-save, .icon-copy, .icon-notification-off, .icon-notification-on, .icon-link,
+.icon-edit, .icon-reload, .icon-fav-off, .icon-fav, .icon-unvote, .icon-time-add, .icon-download, .icon-del {
   display: inline-block;
   font-size: inherit;
   text-rendering: auto;
@@ -21,6 +22,18 @@
   background: none !important;
   padding-left: 10px;
 }
+
+.icon-download.icon-only:before, .icon-del.icon-only:before, .icon-checked.icon-only:before {
+  margin-right: 3px;
+  font-size: 17px;
+  transform: translate(0, 0);
+}
+.icon-download.icon-only, .icon-del.icon-only, .icon-checked.icon-only {
+  font-family: FontAwesome;
+  width: fit-content;
+  height: fit-content;
+}
+
 #context-menu li>a{
   font-family: 'Lato', Helvetika, Calibri, Arial, sans-serif;
 }
@@ -239,7 +252,13 @@ a.icon{
 .fa-check:before, form .icon-checked:before {
   content: "\f00c";
   color: #23d2c5;
-
+}
+.fa-check:before, .icon-checked:before {
+  content: "\f00c";
+  color: #23d2c5;
+}
+.fa-download:before, .icon-download:before {
+  content: "\f019";
 }
 .fa-remove:before,
 .fa-close:before,
