@@ -1,10 +1,10 @@
 'use strict';
 $(function() {
   $("#main").before($("#main-menu"));
-  $("#wrapper2").prepend($("#top-menu"));
-  $("#wrapper2").prepend($("#header"));
+  $("#wrapper").prepend($("#top-menu"));
+  $("#wrapper").prepend($("#header"));
   addLogo();
-  
+
   //For search and jump project elements
   var srch = '<label class = expandSearch ></label>'
   $( '#quick-search #q' ).before(srch).prependTo('.expandSearch');
@@ -16,7 +16,7 @@ $(function() {
     var X = $(this).attr('id');
     if(X == 1) {
       $("#profilemenu").hide();
-      $(this).attr('id', '0'); 
+      $(this).attr('id', '0');
     }
     else {
       $("#profilemenu").show();
@@ -63,8 +63,8 @@ function addLogo () {
     topMenus.forEach(function(menu){
       $("#top-menu ."+menu).html("<svg class='menu-icon' id='"+menu+"-icon'></svg>");
     });
-    
-  // For adding title to all icons 
+
+  // For adding title to all icons
   $("#project-jump .drdn-trigger").attr("title", "Jump to project");
   $("#userprofile").attr("title", "User profile");
 
